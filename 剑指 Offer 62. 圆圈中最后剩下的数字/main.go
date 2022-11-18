@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func lastRemaining(n int, m int) int {
+func lastRemaining1(n int, m int) int {
 	nums := make([]int, n)
 	for i := 0; i < n; i++ {
 		nums[i] = i
@@ -15,6 +15,14 @@ func lastRemaining(n int, m int) int {
 		count %= len(nums)
 	}
 	return nums[0]
+}
+
+func lastRemaining(n int, m int) int {
+	f := 0
+	for i := 2; i != n+1; i++ {
+		f = (m + f) % i
+	}
+	return f
 }
 
 func main() {

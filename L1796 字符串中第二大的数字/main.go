@@ -28,9 +28,9 @@ func secondHighest1(s string) int {
 
 func secondHighest(s string) int {
 	first, second := -1, -1
-	for _, c := range s {
-		if unicode.IsDigit(c) {
-			num := int(c - '0')
+	for i := 0; i < len(s); i++ {
+		if unicode.IsDigit(rune(s[i])) {
+			num := int(s[i] - '0')
 			if num > first {
 				second = first
 				first = num

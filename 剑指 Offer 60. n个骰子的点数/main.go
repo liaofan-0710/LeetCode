@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func dicesProbability(n int) []float64 {
 	dp := make([]float64, 6)
@@ -44,5 +46,5 @@ func fill(array []interface{}, num ...interface{}) (ans []interface{}) {
 }
 
 func main() {
-	fmt.Println(dicesProbability(2))
+	//fmt.Println(dicesProbability(2))
 }

@@ -1,4 +1,4 @@
-package main
+package tree
 
 import "fmt"
 
@@ -24,7 +24,7 @@ func preorderTraversal(root *TreeNode) []int {
 }
 
 // 中序遍历
-func inorderTraversal(root *TreeNode) []int {
+func InorderTraversal(root *TreeNode) []int {
 	nums := make([]int, 0)
 	var dfs func(node *TreeNode)
 	dfs = func(node *TreeNode) {
